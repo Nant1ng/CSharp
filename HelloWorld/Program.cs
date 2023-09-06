@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Vad heter du?");
             string? name = Console.ReadLine();
-            Console.WriteLine($"Hejsan,  + {name}");
+            Console.WriteLine($"Hejsan, {name}");
 
         }
     }
