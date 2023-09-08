@@ -161,6 +161,28 @@
             //}
 
             // 9.
+            Console.Write("Enter the amount you have: ");
+            decimal amount = Convert.ToDecimal(Console.ReadLine());
+
+            ExchangeToSEK(amount);
+
+        }
+
+        static void ExchangeToSEK(decimal amount)
+        {
+            int[] denominations = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
+
+            Console.Write("Money Exchange: ");
+            for (int i = 0; i < denominations.Length; i++)
+            {
+                int numNotes = (int)(amount / denominations[i]);
+                if (numNotes > 0)
+                {
+                    amount -= numNotes * denominations[i];
+                    Console.WriteLine($"{numNotes} x {denominations[i]} Kr");
+                }
+            }
+
         }
     }
 }
