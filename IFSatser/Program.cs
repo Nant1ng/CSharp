@@ -4,6 +4,112 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("===================================");
+            Console.WriteLine("|| Welcome, choose an exercise!  ||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write("          IF-SATSER            ");
+            Console.ResetColor();
+            Console.Write("||");
+            Console.WriteLine();
+            Console.WriteLine("===================================");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [1].");
+            Console.ResetColor();
+            Console.Write("        #1                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [2].");
+            Console.ResetColor();
+            Console.Write("        #2                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [3].");
+            Console.ResetColor();
+            Console.Write("        #3                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [4].");
+            Console.ResetColor();
+            Console.Write("        #4                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [5].");
+            Console.ResetColor();
+            Console.Write("        #5                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [6].");
+            Console.ResetColor();
+            Console.Write("        #6                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [7].");
+            Console.ResetColor();
+            Console.Write("        #7                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [8].");
+            Console.ResetColor();
+            Console.Write("        #8                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("||-------------------------------||");
+            Console.Write("||");
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.Write(" [9].");
+            Console.ResetColor();
+            Console.Write("        #9                ");
+            Console.Write("||");
+            Console.WriteLine("");
+            Console.WriteLine("===================================");
+
+
+            Console.Write("Enter your choice: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice) {
+                case 1: Console.WriteLine("You chose Exercise 1.");
+                    break; 
+                case 2: Console.WriteLine("You chose Exercise 2."); 
+                    break; 
+                case 3: Console.WriteLine("You chose Exercise 3."); 
+                    break; 
+                case 4: Console.WriteLine("You chose Exercise 4.");
+                    break;
+                case 5: Console.WriteLine("You chose Exercise 5.");
+                    break;
+                case 6: Console.WriteLine("You chose Exercise 6.");
+                    break;
+                case 7: Console.WriteLine("You chose Exercise 7.");
+                    break;  
+                case 8: Console.WriteLine("You chose Exercise 8.");
+                    break;
+                case 9: Console.WriteLine("You chose Exercise 9.");
+                    break;
+            }
             // 1.
             //Console.Write("Write a number: ");
             //int num = Convert.ToInt32(Console.ReadLine());
@@ -161,28 +267,28 @@
             //}
 
             // 9.
-            Console.Write("Enter the amount you have: ");
-            decimal amount = Convert.ToDecimal(Console.ReadLine());
+            //    Console.Write("Enter the amount you have: ");
+            //    decimal amount = Convert.ToDecimal(Console.ReadLine());
 
-            ExchangeToSEK(amount);
+            //    ExchangeToSEK(amount);
 
-        }
+            //}
 
-        static void ExchangeToSEK(decimal amount)
-        {
-            int[] denominations = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
+            //static void ExchangeToSEK(decimal amount)
+            //{
+            //    int[] denominations = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 
-            Console.Write("Money Exchange: ");
-            for (int i = 0; i < denominations.Length; i++)
-            {
-                int numNotes = (int)(amount / denominations[i]);
-                if (numNotes > 0)
-                {
-                    amount -= numNotes * denominations[i];
-                    Console.WriteLine($"{numNotes} x {denominations[i]} Kr");
-                }
-            }
-
+            //    Console.Write("Money Exchange: ");
+            //    for (int i = 0; i < denominations.Length; i++)
+            //    {
+            //        int numNotes = (int)(amount / denominations[i]);
+            //        if (numNotes > 0)
+            //        {
+            //            amount -= numNotes * denominations[i];
+            //            Console.WriteLine($"{numNotes} x {denominations[i]} Kr");
+            //        }
+            //    }
+            //}
         }
     }
 }
