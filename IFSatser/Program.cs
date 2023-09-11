@@ -113,6 +113,7 @@
                         }
 
                         break;
+
                     case 2:
                         Console.WriteLine("You chose Exercise 2.");
                         Console.WriteLine("How many milk cartons are left?");
@@ -132,6 +133,7 @@
                         }
 
                         break;
+
                     case 3:
                         Console.WriteLine("You chose Exercise 3.");
                         Console.Write("Could you tell me the temperature from the thermometer: ");
@@ -151,6 +153,7 @@
                         }
 
                         break;
+
                     case 4:
                         Console.WriteLine("You chose Exercise 4.");
                         Console.WriteLine("How old are you?");
@@ -170,25 +173,34 @@
                         }
 
                         break;
+
                     case 5:
                         Console.WriteLine("You chose Exercise 5.");
                         Console.Write("Choose one of the following categories are you, Adult, Retired or Student: ");
-                        string? category = Console.ReadLine().ToLower();
+                        string? category = Console.ReadLine();
 
-                        if (category == "adult")
+                        // if (category is not null && category.Length > 1)
+                        if (!string.IsNullOrWhiteSpace(category))
                         {
-                            Console.WriteLine("Your trip will cost 30kr.");
-                        }
-                        else if (category == "retired" || category == "student")
-                        {
-                            Console.WriteLine("Your trip will cost 20kr.");
+                            string answer = category.ToLower();
+
+                            if (answer == "adult")
+                            {
+                                Console.WriteLine("Your trip will cost 30kr.");
+                            }
+                            else if (answer == "retired" || answer == "student")
+                            {
+                                Console.WriteLine("Your trip will cost 20kr.");
+                            }
+                            else { Console.WriteLine("Your answer didnt match any of the categories."); }
                         }
                         else
                         {
-                            Console.WriteLine("Your answer didnt match any of the categories.");
+                            Console.WriteLine("You didnt enter a category.");
                         }
 
                         break;
+
                     case 6:
                         Console.WriteLine("You chose Exercise 6.");
                         Console.Write("Tell me your birth year: ");
@@ -208,10 +220,12 @@
                         }
 
                         break;
+
                     case 7:
                         Console.WriteLine("You chose Exercise 7.");
                         Console.WriteLine("Tell me which country do you live in? ");
                         string? country = Console.ReadLine();
+
                         if (country is not null)
                         {
                             string answer = country.ToLower();
@@ -226,50 +240,61 @@
                         }
 
                         break;
+
                     case 8:
                         Console.WriteLine("You chose Exercise 8.");
                         Console.WriteLine("Tell me how much money you have?");
                         decimal money = Convert.ToDecimal(Console.ReadLine());
 
-                        Console.WriteLine($"You have {money}kr, do you have a discount?");
-                        string? discount = Console.ReadLine().ToLower();
+                        Console.WriteLine($"You have {money}kr, do you have a discount? yes/no");
+                        string? discount = Console.ReadLine();
 
-                        if (discount == "yes")
+                        if (!string.IsNullOrWhiteSpace(discount))
                         {
-                            if (money > 15 && money < 25)
+
+                            string discountValue = discount.ToLower();
+
+                            if (discountValue == "yes")
                             {
-                                Console.WriteLine("Du kan köpa en liten hamburgare och en liten pommes.");
-                            }
-                            else if (money > 25 && money <= 50)
-                            {
-                                Console.WriteLine("Du kan köpa en stor hamburgare och en pommes.");
-                            }
-                            else if (money > 60)
-                            {
-                                Console.WriteLine("Du kan köpa en meal med drycka");
+                                if (money > 15 && money < 25)
+                                {
+                                    Console.WriteLine("Du kan köpa en liten hamburgare och en liten pommes.");
+                                }
+                                else if (money > 25 && money <= 50)
+                                {
+                                    Console.WriteLine("Du kan köpa en stor hamburgare och en pommes.");
+                                }
+                                else if (money > 60)
+                                {
+                                    Console.WriteLine("Du kan köpa en meal med drycka");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Tyvärr du har för lite pengar för att handla här.");
+                                }
                             }
                             else
                             {
-                                Console.WriteLine("Tyvärr du har för lite pengar för att handla här.");
+                                if (money > 15 && money < 25)
+                                {
+                                    Console.WriteLine("Du kan köpa en liten hamburgare.");
+                                }
+                                else if (money > 25 && money >= 50)
+                                {
+                                    Console.WriteLine("Du kan köpa en stor hamburgare.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Tyvärr du har för lite pengar för att handla här.");
+                                }
                             }
-                        }
-                        else
+                        } else
                         {
-                            if (money > 15 && money < 25)
-                            {
-                                Console.WriteLine("Du kan köpa en liten hamburgare.");
-                            }
-                            else if (money > 25 && money >= 50)
-                            {
-                                Console.WriteLine("Du kan köpa en stor hamburgare.");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Tyvärr du har för lite pengar för att handla här.");
-                            }
+                            Console.WriteLine("You need to answer with yes or no.");
                         }
 
                         break;
+
                     case 9:
                         Console.WriteLine("You chose Exercise 9.");
 
@@ -278,6 +303,7 @@
 
                         ExchangeToSEK(amount);
                         break;
+
                     default:
                         Console.WriteLine("Invaild choice, please choose a valid exercise");
                         break;
