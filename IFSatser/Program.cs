@@ -90,6 +90,14 @@
                 Console.Write("        #9                ");
                 Console.Write("||");
                 Console.WriteLine("");
+                Console.WriteLine("||-------------------------------||");
+                Console.Write("||");
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.Write(" [10].");
+                Console.ResetColor();
+                Console.Write("      Bonus              ");
+                Console.Write("||");
+                Console.WriteLine("");
                 Console.WriteLine("===================================");
 
 
@@ -288,7 +296,8 @@
                                     Console.WriteLine("Tyvärr du har för lite pengar för att handla här.");
                                 }
                             }
-                        } else
+                        }
+                        else
                         {
                             Console.WriteLine("You need to answer with yes or no.");
                         }
@@ -298,10 +307,40 @@
                     case 9:
                         Console.WriteLine("You chose Exercise 9.");
 
-                        Console.Write("Enter the amount you have: ");
+                        Console.Write("Enter the amount: ");
                         decimal amount = Convert.ToDecimal(Console.ReadLine());
 
-                        ExchangeToSEK(amount);
+                        Console.Write("Money Echange: ");
+
+                        int fiveHundred = (int)(amount / 500);
+                        amount %= 500;
+
+                        int oneHundred = (int)(amount / 100);
+                        amount %= 100;
+
+                        int fifty = (int)(amount / 50);
+                        amount %= 50;
+
+                        if (fiveHundred > 0)
+                            Console.WriteLine($"{fiveHundred} x 500Kr");
+
+                        if (oneHundred > 0)
+                            Console.WriteLine($"{oneHundred} x 100Kr");
+
+                        if (fifty > 0)
+                            Console.WriteLine($"{fifty} x 50Kr");
+
+                        Console.WriteLine($"The amount thats left {amount}Kr.");
+
+                        break;
+
+                    case 10:
+                        Console.WriteLine("You chose Exercise 10.");
+
+                        Console.Write("Enter the amount you have: ");
+                        decimal newAmount = Convert.ToDecimal(Console.ReadLine());
+
+                        ExchangeToSEK(newAmount);
                         break;
 
                     default:
