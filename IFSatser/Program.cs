@@ -8,7 +8,6 @@
 
             while (!exitMenu)
             {
-                Console.Clear();
 
                 Console.WriteLine("===================================");
                 Console.WriteLine("|| Welcome, choose an exercise!  ||");

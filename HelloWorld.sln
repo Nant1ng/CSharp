@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{94D16451-E6FD-4B53-BBDB-7A860C53C81B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFSatser", "IFSatser\IFSatser.csproj", "{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSatser", "IFSatser\IFSatser.csproj", "{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuTemplate", "MenuTemplate\MenuTemplate.csproj", "{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
