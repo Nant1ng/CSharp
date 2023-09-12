@@ -322,13 +322,19 @@
                         amount %= 50;
 
                         if (fiveHundred > 0)
+                        {
                             Console.WriteLine($"{fiveHundred} x 500Kr");
+                        }
 
                         if (oneHundred > 0)
+                        {
                             Console.WriteLine($"{oneHundred} x 100Kr");
+                        }
 
                         if (fifty > 0)
+                        {
                             Console.WriteLine($"{fifty} x 50Kr");
+                        }
 
                         Console.WriteLine($"The amount thats left {amount}Kr.");
 
@@ -340,7 +346,7 @@
                         Console.Write("Enter the amount you have: ");
                         decimal newAmount = Convert.ToDecimal(Console.ReadLine());
 
-                        ExchangeToSEK(newAmount);
+                        Exchange(newAmount);
                         break;
 
                     default:
@@ -350,9 +356,10 @@
 
                 Console.WriteLine("Press Enter to go back to the menu.");
                 Console.ReadLine();
+                Console.Clear();
             }
         }
-        static void ExchangeToSEK(decimal amount)
+        static void Exchange(decimal amount)
         {
             int[] denominations = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
 
