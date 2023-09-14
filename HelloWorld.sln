@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSatser", "IFSatser\IFSatser.csproj", "{D1BC9E49-54D7-4C4A-9F0E-C1C2F7D8875D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuTemplate", "MenuTemplate\MenuTemplate.csproj", "{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MenuTemplate", "MenuTemplate\MenuTemplate.csproj", "{87A0FA37-02DF-4ECC-A82F-E2FC0F64A16B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loopar", "Loopar\Loopar.csproj", "{C99C5884-64DD-49DB-B8C2-E6E7E0C4FB24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loopar", "Loopar\Loopar.csproj", "{C99C5884-64DD-49DB-B8C2-E6E7E0C4FB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditions", "Conditions\Conditions.csproj", "{6E86F548-C53A-4EA6-8D88-D7C18E6A9338}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C99C5884-64DD-49DB-B8C2-E6E7E0C4FB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C99C5884-64DD-49DB-B8C2-E6E7E0C4FB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C99C5884-64DD-49DB-B8C2-E6E7E0C4FB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E86F548-C53A-4EA6-8D88-D7C18E6A9338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E86F548-C53A-4EA6-8D88-D7C18E6A9338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E86F548-C53A-4EA6-8D88-D7C18E6A9338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E86F548-C53A-4EA6-8D88-D7C18E6A9338}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,7 +22,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [1].");
                 Console.ResetColor();
-                Console.Write("        #1                ");
+                Console.Write("      LOOP #1             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -30,7 +30,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [2].");
                 Console.ResetColor();
-                Console.Write("        #2                ");
+                Console.Write("      LOOP #2             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -38,7 +38,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [3].");
                 Console.ResetColor();
-                Console.Write("        #3                ");
+                Console.Write("      LOOP #3             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -46,7 +46,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [4].");
                 Console.ResetColor();
-                Console.Write("        #4                ");
+                Console.Write("      LOOP #4             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -54,7 +54,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [5].");
                 Console.ResetColor();
-                Console.Write("        #5                ");
+                Console.Write("      LOOP #5             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -62,7 +62,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [6].");
                 Console.ResetColor();
-                Console.Write("        #6                ");
+                Console.Write("      LOOP #6             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("||-------------------------------||");
@@ -70,7 +70,7 @@
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.Write(" [7].");
                 Console.ResetColor();
-                Console.Write("        #7                ");
+                Console.Write("      LOOP #7             ");
                 Console.Write("||");
                 Console.WriteLine("");
                 Console.WriteLine("===================================");
@@ -182,15 +182,38 @@
                         break;
 
                     case 6:
-                        List<int> tempList = new List<int> { 20, 25, 23, 21, 20 };
+                        int tempAverage;
+                        bool done = true;
 
-                        int last = tempList[tempList.Count - 1];
-                        int secondLast = tempList[tempList.Count - 2];
-                        int earliest = tempList[tempList.Count - 3];
+                        List<int> tempList = new List<int>();
 
-                        int meanValue = (last + secondLast + earliest) / 3;
+                        while (done)
+                        {
+                            Console.Write("Please input today's temperature:");
+                            tempList.Add(Convert.ToInt32(Console.ReadLine()));
 
-                        Console.WriteLine($"({last} + {secondLast} + {earliest}) / 3 = {meanValue}");
+                            if (tempList.Count >= 3)
+                            {
+                                tempAverage = 0;
+                                for (int i = tempList.Count; i > tempList.Count - 3; i--)
+                                {
+                                    tempAverage += tempList[i - 1];
+                                }
+
+                                tempAverage /= 3;
+
+                                if (tempAverage < 25)
+                                {
+                                    Console.WriteLine($"Average temp: {tempAverage}");
+                                    done = false;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Alarm");
+                                    done = false;
+                                }
+                            }
+                        }
 
                         break;
 
@@ -198,7 +221,6 @@
                         Console.WriteLine("Rolling the dices...");
                         Console.WriteLine("The Values are...");
 
-                        //int[] dice = { 1, 2, 3, 4, 5, 6 };
                         List<int> dice = new List<int> { 1, 2, 3, 4, 5, 6 };
                         Random diceValue = new Random();
 
@@ -208,9 +230,9 @@
                         {
                             for (int i = 1; i <= 2; i++)
                             {
-                                int value1 = diceValue.Next(0, dice.Count);
+                                int value = diceValue.Next(0, dice.Count);
 
-                                Console.WriteLine(value1);
+                                Console.WriteLine(value);
                             }
 
                             Console.WriteLine("Do you want to play again? y/n");
@@ -227,7 +249,7 @@
                             }
                             else
                             {
-                                Console.WriteLine("You need to anser y or n.");
+                                Console.WriteLine("You need to answer y or n.");
                             }
                         }
 
