@@ -116,8 +116,10 @@ namespace Conditions
                         ExerciseFive();
                         break;
                     case 6:
+                        ExerciseSix();
                         break;
                     case 7:
+                        ExerciseSeven();
                         break;
                     case 8:
                         break;
@@ -256,6 +258,93 @@ namespace Conditions
                 }
             }
 
+        }
+        static void ExerciseSix()
+        {
+            bool acceptedInput = false;
+
+            // Frågade ChatGPT om förbättrings möjligheter.
+            const int comparisonValue = 10;
+
+            while (!acceptedInput)
+            {
+                Console.Write("Give me a number: ");
+                string? userInput = Console.ReadLine();
+                bool intCheck = int.TryParse(userInput, out int number);
+
+
+                if (userInput != null && intCheck)
+                {
+                    if (number > comparisonValue)
+                    {
+                        Console.WriteLine($"The number {number} is bigger than {comparisonValue}.");
+                        acceptedInput = true;
+                    }
+                    else if (number < 10)
+                    {
+                        Console.WriteLine($"The number {number} is less than 10.");
+                        acceptedInput = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"The number {number} is equal to 10.");
+                        acceptedInput = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a vaild number.");
+                }
+            }
+        }
+        static void ExerciseSeven()
+        {
+            bool acceptedInput = false;
+
+            while (!acceptedInput)
+            {
+                Console.Write("Give me a temperature: ");
+                string? userInput = Console.ReadLine();
+                bool intCheck = int.TryParse(userInput, out int number);
+
+                if (userInput != null && intCheck)
+                {
+                    if (number < -10)
+                    {
+                        Console.WriteLine("Its verry cold!");
+                        acceptedInput = true;
+                    }
+                    else if (number > -10 && number <= -1)
+                    {
+                        Console.WriteLine("Its cold!");
+                        acceptedInput = true;
+                    }
+                    else if (number >= 0 && number <= 10)
+                    {
+                        Console.WriteLine("Its mild!");
+                        acceptedInput = true;
+                    }
+                    else if (number >= 11 && number <= 20)
+                    {
+                        Console.WriteLine("Its fine!");
+                        acceptedInput = true;
+                    }
+                    else if (number >= 21 && number <= 30)
+                    {
+                        Console.WriteLine("Its hot!");
+                        acceptedInput = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Help Im melting!");
+                        acceptedInput = true;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a vaild number.");
+                }
+            }
         }
     }
 }
