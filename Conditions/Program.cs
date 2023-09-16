@@ -113,6 +113,7 @@ namespace Conditions
                         ExerciseFour();
                         break;
                     case 5:
+                        ExerciseFive();
                         break;
                     case 6:
                         break;
@@ -224,6 +225,37 @@ namespace Conditions
                     Console.WriteLine($"{userValue} / {userValue2} = {userValue / userValue2}");
                 }
             }
+        }
+        static void ExerciseFive()
+        {
+            Console.Write("Give me three numbers: ");
+            string? userInput = Console.ReadLine();
+            if (userInput != null)
+            {
+                string[] numbers = userInput.Split(" ");
+
+                if (numbers.Length == 3)
+                {
+                    int numberOne = Convert.ToInt32(numbers[0]);
+                    int numberTwo = Convert.ToInt32(numbers[1]);
+                    int numberThree = Convert.ToInt32(numbers[2]);
+
+                    if (numberOne == numberTwo && numberTwo == numberThree)
+                    {
+                        Console.WriteLine(":O");
+                    }
+                    else
+                    {
+                        int largestNumber = Math.Max(numberOne, Math.Max(numberTwo, numberThree));
+                        Console.WriteLine($"The largest number is {largestNumber}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter three numbers.");
+                }
+            }
+
         }
     }
 }
