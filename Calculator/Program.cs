@@ -13,7 +13,6 @@
                 string[] numbers = inputValue.Split(", ");
                 float numberOne = int.Parse(numbers[0]);
                 float numberTwo = int.Parse(numbers[1]);
-                float sum;
 
                 Console.WriteLine("Which math operation do you want to use? ");
                 Console.WriteLine("+, -, *, /, %");
@@ -28,30 +27,28 @@
                             Addition(numberOne, numberTwo);
                             break;
                         case "-":
-                            sum = numberOne - numberTwo;
-                            Console.WriteLine($"{numberOne} - {numberTwo} = {sum}");
+                            Subtraction(numberOne, numberTwo);
                             break;
                         case "*":
-                            sum = numberOne * numberTwo;
-                            Console.WriteLine($"{numberOne} * {numberTwo} = {sum}");
+                            Multiplication(numberOne, numberTwo);
                             break;
                         case "/":
-                            sum = numberOne / numberTwo;
-                            Console.WriteLine($"{numberOne} / {numberTwo} = {sum}");
+                            Division(numberOne, numberTwo);
                             break;
                         case "%":
-                            sum = numberOne % numberTwo;
-                            Console.WriteLine($"{numberOne} % {numberTwo} = {sum}");
+                            Modula(numberOne, numberTwo);
                             break;
                         default:
                             Console.WriteLine($"You cant choose this operator: {choice}");
                             break;
+
                     }
                 }
                 else
                 {
                     Console.WriteLine("You have to answer with a Math Operation: ");
                     Console.WriteLine("+, -, *, /, %");
+
                 }
             }
         }
@@ -59,6 +56,26 @@
         {
             float sum = numberOne + numberTwo;
             Console.WriteLine($"{numberOne} + {numberTwo} = {sum}");
+        }
+        static void Subtraction(float numberOne, float numberTwo)
+        {
+            float sum = numberOne - numberTwo;
+            Console.WriteLine($"{numberOne} - {numberTwo} = {sum}");
+        }
+        static void Multiplication(float numberOne, float numberTwo)
+        {
+            float sum = numberOne * numberTwo;
+            Console.WriteLine($"{numberOne} * {numberTwo} = {sum}");
+        }
+        static void Division(float numberOne, float numberTwo)
+        {
+            float sum = numberOne / numberTwo;
+            Console.WriteLine($"{numberOne} / {numberTwo} = {sum}");
+        }
+        static void Modula(float numberOne, float numberTwo)
+        {
+            float sum = numberOne % numberTwo;
+            Console.WriteLine($"{numberOne} % {numberTwo} = {sum}");
         }
     }
 }
