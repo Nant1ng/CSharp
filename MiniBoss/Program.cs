@@ -100,19 +100,31 @@
             matrix[2] = new int[2];
             matrix[3] = new int[6];
 
-            for (int row = 0; row < matrix.Length; row++)
+            //for (int row = 0; row < matrix.Length; row++)
+            //{
+            //    int addValue = 10;
+
+            //    for (int col = 0; col < matrix[row].Length; col++)
+            //    {
+            //        matrix[row][col] = addValue;
+            //        addValue += 10;
+            //        Console.Write(matrix[row][col] + " ");
+
+            //    }
+            //    Console.WriteLine();
+
+            //}
+
+            int addValue = 0;
+            for (int i = 0; i < matrix[1].Length; i++)
             {
-                int addValue = 10;
+                addValue += 10;
+                matrix[1][i] = addValue;
+            }
 
-                for (int col = 0; col < matrix[row].Length; col++)
-                {
-                    matrix[row][col] = addValue;
-                    addValue += 10;
-                    Console.Write(matrix[row][col] + " ");
-
-                }
-                Console.WriteLine();
-
+            foreach (int value in matrix[1])
+            {
+                Console.WriteLine(value);
             }
         }
         static void RectangularArray()
