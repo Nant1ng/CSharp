@@ -70,7 +70,9 @@
         static void Division(float numberOne, float numberTwo)
         {
             float sum = numberOne / numberTwo;
+            float rest = numberOne % numberTwo;
             Console.WriteLine($"{numberOne} / {numberTwo} = {sum}");
+            Console.WriteLine($"rest: {rest}");
         }
         static void Modula(float numberOne, float numberTwo)
         {
