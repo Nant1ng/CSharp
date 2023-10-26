@@ -1,15 +1,15 @@
 ﻿namespace FactoryDesignPattern
 {
-    class RocketEnemyShip : IEnemyShip
+    public class BigUFOEnemyShip : IEnemyShip
     {
         public string Name { get; set; }
         public double AmtDamage { get; set; }
         public int Hp { get; set; }
 
-        public RocketEnemyShip()
+        public BigUFOEnemyShip()
         {
-            Name = "Rocket Enemy Ship";
-            AmtDamage = 10.0;
+            Name = "Big UFO Enemy Ship";
+            AmtDamage = 40.0;
             Hp = 100;
         }
 
