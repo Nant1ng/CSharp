@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce", "ECommerce\ECom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDuperClassLibrary", "SuperDuperClassLibrary\SuperDuperClassLibrary.csproj", "{2A038016-4CBE-4F8A-9266-0A376E55371D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceWebb", "EcommerceWebb\EcommerceWebb.csproj", "{9F96233D-7AC8-41F9-AFDB-B15FC1DD2A73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -295,6 +297,10 @@ Global
 		{2A038016-4CBE-4F8A-9266-0A376E55371D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A038016-4CBE-4F8A-9266-0A376E55371D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A038016-4CBE-4F8A-9266-0A376E55371D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F96233D-7AC8-41F9-AFDB-B15FC1DD2A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F96233D-7AC8-41F9-AFDB-B15FC1DD2A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F96233D-7AC8-41F9-AFDB-B15FC1DD2A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F96233D-7AC8-41F9-AFDB-B15FC1DD2A73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
